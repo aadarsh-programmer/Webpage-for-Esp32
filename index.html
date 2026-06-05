@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Colorful Transition</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial;
+  color:white;
+  background:linear-gradient(270deg,#ff0080,#7928ca,#2afadf,#00ff88);
+  background-size:600% 600%;
+  animation:bgColor 8s ease infinite;
+}
+
+@keyframes bgColor{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.box{
+  padding:35px;
+  border-radius:15px;
+  background:rgba(0,0,0,0.25);
+  text-align:center;
+  animation:pop 1s ease;
+}
+
+@keyframes pop{
+  from{opacity:0; transform:scale(0.85)}
+  to{opacity:1; transform:scale(1)}
+}
+
+button{
+  margin-top:15px;
+  padding:10px 30px;
+  border:none;
+  border-radius:25px;
+  background:white;
+  color:#333;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#ffe600;
+  transform:scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Colorful Animation 🌈</h2>
+  <p>Ultra-light transition for ESP32</p>
+  <button>Click Me</button>
+</div>
+
+</body>
+</html>
